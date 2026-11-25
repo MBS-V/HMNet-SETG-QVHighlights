@@ -1,0 +1,7 @@
+# QVHighlights commonly uses concatenated SlowFast + CLIP visual features and CLIP text features.
+# Confirm actual dimensions from the downloaded feature files before training.
+data:
+  dataset: qvhighlights
+  video_dim: 2816
+  text_dim: 512
+  max_subevents: 4

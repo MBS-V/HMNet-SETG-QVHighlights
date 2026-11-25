@@ -1,0 +1,8 @@
+# Runtime dependencies. Install a compatible PyTorch build separately.
+numpy>=1.24
+scipy>=1.10
+omegaconf>=2.3
+PyYAML>=6.0
+tqdm>=4.65
+spacy>=3.7
+h5py>=3.9

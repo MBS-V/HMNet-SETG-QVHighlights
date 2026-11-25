@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hmnet-setg"
+version = "0.1.0"
+description = "HM-Net reproduction and sub-event-aware temporal grounding extension"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "omegaconf>=2.3", "PyYAML>=6.0", "spacy>=3.7", "h5py>=3.9"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

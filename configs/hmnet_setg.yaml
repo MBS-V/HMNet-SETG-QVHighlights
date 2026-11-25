@@ -1,0 +1,6 @@
+model:
+  use_setg: true
+  max_subevents: 4
+loss:
+  weight_sub: 0.1
+  weight_div: 0.1

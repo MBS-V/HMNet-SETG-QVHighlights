@@ -1,0 +1,13 @@
+name: hmnet-setg
+channels: [pytorch, conda-forge]
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - h5py
+  - pytorch
+  - pip:
+      - omegaconf>=2.3
+      - spacy>=3.7
+      - pytest>=7.4

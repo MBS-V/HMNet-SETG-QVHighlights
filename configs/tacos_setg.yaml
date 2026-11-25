@@ -1,0 +1,13 @@
+data:
+  dataset: tacos
+  video_dim: 500
+  text_dim: 300
+  max_subevents: 4
+model:
+  use_setg: true
+  use_reconstruction: true
+loss:
+  weight_sub: 0.1
+  weight_div: 0.1
+  weight_rec: 0.1
+  weight_sal: 0.0

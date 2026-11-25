@@ -1,0 +1,6 @@
+data:
+  dataset: tacos
+  # Must be set to the actual C3D/GloVe feature dimensions after validation.
+  video_dim: 500
+  text_dim: 300
+  max_subevents: 4
