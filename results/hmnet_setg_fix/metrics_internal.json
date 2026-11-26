@@ -1,0 +1,14 @@
+{
+  "metrics": {
+    "R1@0.3": 26.129032258064516,
+    "R1@0.5": 14.451612903225808,
+    "R1@0.7": 6.580645161290323,
+    "mIoU": 17.98110008239746,
+    "mAP@0.50": 26.259437292453807,
+    "mAP@0.75": 10.710045820368402,
+    "mAP_avg": 13.24573162540367
+  },
+  "n_queries": 1550,
+  "use_setg": true,
+  "note": "internal metrics for sanity/model selection; report the official evaluator output"
+}

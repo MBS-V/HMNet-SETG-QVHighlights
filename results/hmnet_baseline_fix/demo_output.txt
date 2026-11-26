@@ -1,0 +1,49 @@
+Model: HM-Net (baseline) | checkpoint best.pt (epoch 3) | device cuda
+
+==============================================================================
+qid 2043 | video fOU0-2bBRnU_360.0_510.0 | duration 150s | inference 460 ms
+Query: "People walk across the street at night then talk in front of a store building."
+Sub-events (K=2): People walk across the street at night | then talk in front of a store building
+Ground truth : [38-60s], [128-130s]
+Predictions  : [118.9-146.7s] 0.65, [17.5-52.5s] 0.65, [103.9-127.7s] 0.65, [1.3-29.0s] 0.62, [28.5-66.0s] 0.62
+Top-1 IoU with best-matching GT: 0.07
+  GT    |               #########                           #        |
+  Top-1 |                                               ============ |
+        0s                                                      150s
+==============================================================================
+qid 5266 | video j9NNAmqweOA_360.0_510.0 | duration 150s | inference 30 ms
+Query: "A person in a dark top uses a henna pen to draw and intricate pattern on the back of the fingers of their left hand in a sped-up video"
+Ground truth : [10-24s]
+Predictions  : [119.1-148.5s] 0.61, [103.2-130.3s] 0.58, [18.9-54.5s] 0.58, [53.6-143.7s] 0.57, [133.1-150.0s] 0.55
+Top-1 IoU with best-matching GT: 0.00
+  GT    |    ######                                                  |
+  Top-1 |                                               ============ |
+        0s                                                      150s
+==============================================================================
+qid 4758 | video MmGtg0qgceA_60.0_210.0 | duration 150s | inference 28 ms
+Query: "Woman in glasses wears a shirt with soccer balls."
+Ground truth : [0-44s]
+Predictions  : [10.1-40.6s] 0.71, [123.6-146.3s] 0.70, [106.8-125.6s] 0.69, [51.0-141.7s] 0.69, [20.2-56.3s] 0.67
+Top-1 IoU with best-matching GT: 0.69
+  GT    |##################                                          |
+  Top-1 |    ============                                            |
+        0s                                                      150s
+==============================================================================
+qid 2570 | video 7PKEbzSNwts_360.0_510.0 | duration 150s | inference 27 ms
+Query: "A lady applying lipstick on her lips"
+Ground truth : [0-36s]
+Predictions  : [49.7-141.7s] 0.72, [18.4-46.8s] 0.71, [122.8-146.0s] 0.69, [1.2-22.5s] 0.69, [31.4-61.1s] 0.68
+Top-1 IoU with best-matching GT: 0.00
+  GT    |##############                                              |
+  Top-1 |                   ======================================   |
+        0s                                                      150s
+==============================================================================
+qid 5587 | video UFWQKrcbhjI_60.0_210.0 | duration 150s | inference 28 ms
+Query: "A man is checking out a small animal burrowing in the grass."
+Ground truth : [100-110s], [112-118s]
+Predictions  : [117.9-148.1s] 0.55, [103.1-130.3s] 0.55, [23.1-59.6s] 0.53, [4.1-35.1s] 0.51, [82.8-109.6s] 0.50
+Top-1 IoU with best-matching GT: 0.00
+  GT    |                                        #######             |
+  Top-1 |                                               ============ |
+        0s                                                      150s
+==============================================================================

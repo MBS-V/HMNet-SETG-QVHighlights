@@ -1,0 +1,57 @@
+seed: 42
+device: auto
+paths:
+  drive_root: ./workspace/nlvms
+  feature_cache: ${paths.drive_root}/features/qvhighlights
+  checkpoints: ${paths.drive_root}/checkpoints
+  logs: ${paths.drive_root}/logs
+  locks: ${paths.drive_root}/locks
+data:
+  dataset: qvhighlights
+  manifest: data/manifest.jsonl
+  feature_dir: ${paths.feature_cache}
+  video_dim: 2816
+  text_dim: 512
+  vocab_size: 49408
+  max_subevents: 4
+reconstruction:
+  mask_fraction: 0.3333333333
+  temperature: 0.5   # MESM recss_tau (config/QVHighlights/*.json); was 0.07 (CLIP value, not MESM)
+  positive_iou: 0.9
+model:
+  hidden_dim: 256
+  heads: 8
+  state_dim: 32
+  enhancement_layers: 2
+  cofusion_layers: 2
+  num_queries: 10
+  decoder_layers: 2
+  max_seq_len: 200
+  dropout: 0.1
+  drop_path: 0.0
+  use_setg: true
+  use_reconstruction: true
+loss:
+  weight_ce: 6.0
+  weight_l1: 10.0
+  weight_giou: 1.0
+  weight_sub: 0.1
+  weight_div: 0.1
+  weight_sal: 1.0
+  weight_rec: 0.1
+  saliency_margin: 0.2
+train:
+  epochs: 100
+  batch_size: 8
+  grad_accum: 4
+  lr: 0.0002
+  weight_decay: 0.0001
+  warmup_epochs: 5
+  grad_clip: 1.0
+  amp: true
+  num_workers: 2
+  keep_last_checkpoints: 2
+  select_metric: mAP_avg   # best.pt = highest validation mAP_avg (internal metric); 'loss' = old behaviour
+eval:
+  iou_thresholds: [0.3, 0.5, 0.7]
+  bootstrap_resamples: 1000
